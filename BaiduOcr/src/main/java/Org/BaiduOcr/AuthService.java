@@ -14,6 +14,7 @@ public class AuthService {
 	/**
 	 * 获取权限token
 	 * 
+	 * @author sunqifeng
 	 * @return 返回示例： { "access_token":
 	 *         "24.460da4889caad24cccdb1fea17221975.2592000.1491995545.282335-1234567",
 	 *         "expires_in": 2592000 }
@@ -21,9 +22,9 @@ public class AuthService {
 	public static String getAuth()
 	{
 		// 官网获取的 API Key 更新为你注册的
-		String clientId = "xxFFlAPGDvhzVGFFsvWesyLmq";
+		String clientId = "xxFlAPGDvhzVGFFsvWesyLmq";
 		// 官网获取的 Secret Key 更新为你注册的
-		String clientSecret = "wwLvkB1KUTMEE4CbU7AVnaMZFDqGzdcCh";
+		String clientSecret = "wLvkB1KUTMEE4CbU7AVnaMZFDqGzdcCh";
 		
 		return getAuth(clientId, clientSecret);
 	}
