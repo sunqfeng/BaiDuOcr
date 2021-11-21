@@ -32,7 +32,7 @@ public class AuthService {
 	 * 获取API访问token 该token有一定的有效期，需要自行管理，当失效时需重新获取.
 	 * 
 	 * @param ak
-	 *            - 百度云官网获取的 API Key
+	 *            - 百度云官网获取的 API Key 
 	 * @param sk
 	 *            - 百度云官网获取的 Securet Key
 	 * @return assess_token 示例：
