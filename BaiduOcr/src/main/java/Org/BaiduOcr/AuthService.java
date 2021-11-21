@@ -61,8 +61,9 @@ public class AuthService {
 			connection.setRequestMethod("GET");
 			connection.connect();
 			
+
 			// 获取所有响应头字段
-			Map<String, List<String>> map = connection.getHeaderFields();
+			Map<String, List<String>> map = connection.getHeaderFields(); 
 			// 遍历所有的响应头字段
 			for (String key : map.keySet())
 			{
