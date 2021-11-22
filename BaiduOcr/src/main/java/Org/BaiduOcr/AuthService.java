@@ -14,7 +14,7 @@ public class AuthService {
 	/**
 	 * 获取权限token
 	 * 
-	 * @author sunqifeng
+	 * @author sunqifeng 2021年11月22日08:23:17
 	 * @return 返回示例： { "access_token":
 	 *         "24.460da4889caad24cccdb1fea17221975.2592000.1491995545.282335-1234567",
 	 *         "expires_in": 2592000 }
