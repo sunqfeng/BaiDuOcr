@@ -1,6 +1,9 @@
 package Org.BaiduOcr;
 
+import java.io.File;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -20,18 +23,15 @@ public class GeneralBasic {
 	 * https://ai.baidu.com/file/544D677F5D4E4F17B4122FBD60DB82B3
 	 * https://ai.baidu.com/file/470B3ACCA3FE43788B5A963BF0B625F3 下载
 	 */
-	public static String generalBasic()
+	public static String generalBasic(String filePath)
 	{
 		// 请求url
 		String url = "https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic";
-
-		Gson gson = new Gson();
-
-		
 		try
 		{
 			// 本地文件路径
-			String filePath = "D://java_picture//wocao.jpg";
+//			String filePath = "D://java_picture//wocao.jpg";
+
 			byte[] imgData = FileUtil.readFileByBytes(filePath);
 			String imgStr = Base64Util.encode(imgData);
 			String imgParam = URLEncoder.encode(imgStr, "UTF-8");
@@ -68,8 +68,23 @@ public class GeneralBasic {
  
 	public static void main(String[] args)
 	{
+
 		System.out.println("已开始...");
-		GeneralBasic.generalBasic();
+		String path = "D://java_picture//";
+
+//		List<String> files = new ArrayList<String>();
+        File file = new File(path);
+        File[] tempList = file.listFiles();
+
+        for (int i = 0; i < tempList.length; i++) {
+            if (tempList[i].isFile()) {
+//                files.add(tempList[i].toString());
+            	GeneralBasic.generalBasic( tempList[i].toString()  );
+            }
+            if (tempList[i].isDirectory()) {
+            }
+        }
+
 	}
 
 
