@@ -43,7 +43,6 @@ public class GeneralBasic {
 			String accessToken = token;
 
 			String result = HttpUtil.post(url, accessToken, param);
-//			System.out.println("sqf==== "+result);
 
 			String obj = result.substring(result.indexOf("[") + 1, result.indexOf("]"));
 			System.out.println("obj===" + obj);
@@ -51,7 +50,6 @@ public class GeneralBasic {
 			for (int i = 0; i < arry.length; i++) {
 				String[] arry1 = arry[i].split("\\:");
 				System.out.println(arry1[1]);
-//				System.out.println( arry1[1].replaceAll("\\s*","").replaceAll("[^(\\u4e00-\\u9fa5)]",""));
 			}
 
 			return result;
@@ -66,14 +64,14 @@ public class GeneralBasic {
 		System.out.println("已开始...");
 		String path = "D://java_picture//";
 
-//		List<String> files = new ArrayList<String>();
 		File file = new File(path);
 		File[] tempList = file.listFiles();
 
 		for (int i = 0; i < tempList.length; i++) {
 			if (tempList[i].isFile()) {
-//                files.add(tempList[i].toString());
+				System.out.println("========================================================");
 				GeneralBasic.generalBasic(tempList[i].toString());
+				System.out.println("========================================================");
 			}
 			if (tempList[i].isDirectory()) {
 			}
